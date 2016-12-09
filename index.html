@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>Coopers k9 design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="main.css">
+<link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:667px) and (min-width:0px)">
+<link href="tablets.css" rel="stylesheet" type="text/css" media="(max-width:1000px) and (min-width:667px)">
+<link href="computer.css" rel="stylesheet" type="text/css" media="(min-width:1000px)">
+<body>
+
+<div class="header">
+
+<div class="w3-display-container">
+  <div class="w3-display-topleft w3-container"><h1 class="w3-center w3-text-light-grey">Coopers k9 design</h1></div>
+<img id="header-image" src="k9.jpg" alt="dog" width="100%">
+</div>
+
+</div>
+
+<div class="content">
+<div class="w3-center w3-container w3-text-light-grey w3-blue">
+<h2><a href="tel:07950823484">Book your FREE consultation<br>07950823484</a></h2>
+</div>
+
+<div class="w3-container">
+Local dog and cat grooming service in Watford. Pick up and drop off by arrangement
+</div>
+
+<div class="w3-row">
+  <div class="w3-col s6">
+    <h2>Services</h2>
+    <button class="accordion">Clipping and scissoring</button>
+    <div class="panel">
+      <h4>Clipping</h4>
+      <p>Some text..</p>
+      <h4>Scissoring</h4>
+      <p>Some text..</p>
+    </div>
+    <button class="accordion">Private area tidy up</button>
+    <div class="panel">
+      <p>Some text..</p>
+    </div>
+    <button class="accordion">Cat grooming</button>
+    <div class="panel">
+      <p>From &pound;25</p>
+    </div>
+    <button class="accordion">Wash and blow dry</button>
+    <div class="panel">
+      <p>From &pound;15</p>
+    </div>
+    <button class="accordion">Full groom</button>
+    <div class="panel">
+      <p>Small dog from &pound;20, medium dogs from &pound;25 large dogs from &pound;35</p>
+    </div>
+    <button class="accordion">Hand stripping</button>
+    <div class="panel">
+      <p>Some text..</p>
+    </div>
+    <div class="w3-container">
+     please call before arriving
+    </div>
+    <button id="directions-mobile" class="accordion">Directions</button>
+    <div class="panel">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2476.635323722363!2d-0.4086767842255375!3d51.62988907965547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48766b17605feab5%3A0x30d2cc429ef61afa!2s6+Bramshot+Way%2C+Watford%2C+Hertfordshire+WD19+7PS!5e0!3m2!1sen!2suk!4v1465570508411" width="100%" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <div id="directions-tablet" class="w3-col s6">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2476.635323722363!2d-0.4086767842255375!3d51.62988907965547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48766b17605feab5%3A0x30d2cc429ef61afa!2s6+Bramshot+Way%2C+Watford%2C+Hertfordshire+WD19+7PS!5e0!3m2!1sen!2suk!4v1465570508411" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+//Initial load of page
+$(document).ready(sizeContent);
+
+//Every resize of window
+$(window).resize(sizeContent);
+
+//Dynamically assign height
+function sizeContent() {
+var newHeight = $("html").height() + "px";
+$(".header").css("height", newHeight);
+$(".content").css("top", newHeight);
+}
+
+//Fade header on scroll
+$(window).scroll(function(){
+    $(".header h1").css("opacity", 1 - $(window).scrollTop() / 500);
+  });
+</script>
+
+
+<div class="w3-container w3-blue">
+  <p>Watford, United Kingdom | <a href="tel:07950823484">Call us now 07950823484</a></p>
+</div>
+
+</div>
+</body>
+</html> 
